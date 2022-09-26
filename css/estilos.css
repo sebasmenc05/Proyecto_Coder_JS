@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*  inicio de header */
+.navbar navbar-expand-lg navbar-light bg-light {
+    display: flex;
+    justify-content: space-between;
+}
+.container-fluid img {
+    width: 4em;
+}
+
+/* footer */
+footer {
+    height: 8rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+footer .Contenedor_MedioSocial { 
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;    
+}
+footer .Contenedor_MedioSocial a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    background-color: rgb(124, 124, 124);
+    border-radius: 50%;
+    text-decoration: none;
+ 
+}
+
+/* main */
+ main .contenedor_principal {
+    width: 100%;
+    height: 91vh;
+    background-image: url("../medios/imagensueño.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* filter: grayscale(900%) brightness(90%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .contenedor_principal section h1 {
+  font-size: 2rem;
+  color: rgba(230, 18, 18, 0.752);
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+}
