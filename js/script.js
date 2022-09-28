@@ -9,6 +9,10 @@ let precioTerrenoC = 1250000
 let montoDeEntrega = 0
 let cantidadDeCuotas = 0
 
+function montoDeCuotas (saldoACancelar, cantidadDeCuotas){
+    montoDeCuotas = saldoACancelar/cantidadDeCuotas
+    return 
+}
 
 let compra = prompt("Elija el numero del terreno que desa comprar \n1- herradura \n2- san marcos \n3-resguardo \n4- esc para salir");
 
@@ -17,7 +21,7 @@ let compra = prompt("Elija el numero del terreno que desa comprar \n1- herradura
         montoDeEntrega = parseInt(prompt("Ingrese en pesos el importe que desea entregar para la compra"))
         cantidadDeCuotas = parseInt(prompt("ingrese cantidad de cuotas para cancelar el terreno"));                 
         let saldoACancelar = precioTerrenoA - montoDeEntrega;
-        let montoDeCuotas = saldoACancelar / cantidadDeCuotas;
+        montoDeCuotas (saldoACancelar, cantidadDeCuotas);
         alert ("Gracias por Elejir el terreno Herradura, el precio a cancelar es de " + saldoACancelar + " en cuotas de " + montoDeCuotas);
 
     } else if (compra ==2){
@@ -25,7 +29,7 @@ let compra = prompt("Elija el numero del terreno que desa comprar \n1- herradura
         montoDeEntrega = parseInt(prompt("Ingrese en pesos el importe que desea entregar para la compra"))
         cantidadDeCuotas = parseInt(prompt("ingrese cantidad de cuotas para cancelar el terreno"));                 
         let saldoACancelar = precioTerrenoB - montoDeEntrega;
-        let montoDeCuotas = saldoACancelar / cantidadDeCuotas;
+        montoDeCuotas (saldoACancelar, cantidadDeCuotas)
         alert ("Gracias por Elejir el terreno San Marcos el precio a cancelar es de " + saldoACancelar + " en cuotas de " + montoDeCuotas);  
 
     } else if (compra ==3){
@@ -33,7 +37,7 @@ let compra = prompt("Elija el numero del terreno que desa comprar \n1- herradura
         montoDeEntrega = parseInt(prompt("Ingrese en pesos el importe que desea entregar para la compra"))
         cantidadDeCuotas = parseInt(prompt("ingrese cantidad de cuotas para cancelar el terreno"));                 
         let saldoACancelar = precioTerrenoC - montoDeEntrega;
-        let montoDeCuotas = saldoACancelar / cantidadDeCuotas;
+        montoDeCuotas (saldoACancelar, cantidadDeCuotas)
         alert ("Gracias por Elejir el terreno Resguardo el precio a cancelar es de " + saldoACancelar + " en cuotas de " + montoDeCuotas);       
     } else {
         alert ("Gracias por su visita. Estamos a disposicion para la compra del terreno")
