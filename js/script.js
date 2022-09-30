@@ -1,11 +1,25 @@
 alert ("Bienvenido a IVAEL Desarrollos Inmobiliarios");
-let terrenoA = "herradura";
-let terrenoB = "san marcos";
-let terrenoC = "resguardo";
 
-let precioTerrenoA = 1000000
-let precioTerrenoB = 1200000
-let precioTerrenoC = 1250000
+
+/*funcion constructora para crear los terrenos  */
+class  Terreno {
+    constructor (lugar, medidas, precio, stock) {
+        this.lugar = lugar.toLowerCase();
+        this.medidas = medidas;
+        this.precio = precio;
+        this.stock = stock;
+    }
+    vender (){
+        this.vendido = false
+    }
+
+}
+
+const terrenoA = new Terreno ("herradura", "10x30", 1000000, 6);
+const terrenoB = new Terreno ("san marcos", "10x40", 1200000, 10);
+const terrenoC = new Terreno ("resguardo", "10x50", 1300000, 8);
+
+
 let montoDeEntrega = 0
 let cantidadDeCuotasMensuales = 0
 let tasaDeInteresMensual = 0.03
@@ -13,13 +27,13 @@ let saldoACancelar
 
 function calcularInteres (){
     let interes = saldoACancelar * tasaDeInteresMensual * cantidadDeCuotasMensuales
-    return
+    return interes
 }
 
 
-function montoDeCuotas (saldoACancelar, cantidadDeCuotas){
+function montoDeCuotas (){
     montoDeCuotas = saldoACancelar/cantidadDeCuotas
-    return 
+    return montoDeCuotas
 }
 
 let compra = prompt("Elija el numero del terreno que desa comprar \n1- herradura \n2- san marcos \n3-resguardo \n4- esc para salir");
@@ -29,7 +43,7 @@ let compra = prompt("Elija el numero del terreno que desa comprar \n1- herradura
         montoDeEntrega = parseInt(prompt("Ingrese en pesos el importe que desea entregar para la compra"))
         cantidadDeCuotas = parseInt(prompt("ingrese cantidad de cuotas para cancelar el terreno"));                 
         saldoACancelar = precioTerrenoA - montoDeEntrega;
-        montoDeCuotas (saldoACancelar, cantidadDeCuotas);
+        montoDeCuotas();
         alert ("Gracias por Elejir el terreno Herradura, el precio a cancelar es de " + saldoACancelar + " en cuotas de " + montoDeCuotas);
 
     } else if (compra ==2){
